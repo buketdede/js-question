@@ -29,10 +29,7 @@ export default function move(list: Folder[], source: string, destination: string
   let indexOfDestinationFolder = -1;
   let indexOfSourceFolder = -1;
   let indexOfFIleToMove = -1;
-
-  if (!list || list.length < 1) {
-    throw new Error('You cannot move a folder');
-  }
+  
   list.forEach((folder: Folder, folderIndex: number) => {
     // Safety Check; If Folder is passed as File, We should throw an Error and Exit;
     if (folder.id === source) {
